@@ -1,0 +1,16 @@
+export const PARTS = {
+  wall:   { type: 'wall',   label: '牆壁', icon: '🧱', color: '#8B4513', dimensions: { width: 1, height: 1 } },
+  roof:   { type: 'roof',   label: '屋頂', icon: '🔺', color: '#B22222', dimensions: { width: 1, height: 1 } },
+  door:   { type: 'door',   label: '門',   icon: '🚪', color: '#8B6914', dimensions: { width: 1, height: 1 } },
+  window: { type: 'window', label: '窗戶', icon: '🪟', color: '#87CEEB', dimensions: { width: 1, height: 1 } },
+  floor:  { type: 'floor',  label: '地板', icon: '🟫', color: '#D2691E', dimensions: { width: 1, height: 1 } },
+  body:   { type: 'body',   label: '車身', icon: '🟦', color: '#4169E1', dimensions: { width: 1, height: 1 } },
+  wheel:  { type: 'wheel',  label: '車輪', icon: '⚫', color: '#333333', dimensions: { width: 1, height: 1 } },
+  bumper: { type: 'bumper', label: '保險桿', icon: '🟥', color: '#DC143C', dimensions: { width: 1, height: 1 } },
+  head:   { type: 'head',   label: '頭部', icon: '🤖', color: '#708090', dimensions: { width: 1, height: 1 } },
+  arm:    { type: 'arm',    label: '手臂', icon: '💪', color: '#778899', dimensions: { width: 1, height: 1 } },
+  leg:    { type: 'leg',    label: '腿部', icon: '🦵', color: '#696969', dimensions: { width: 1, height: 1 } },
+  hand:   { type: 'hand',   label: '手掌', icon: '✋', color: '#A9A9A9', dimensions: { width: 1, height: 1 } },
+  foot:   { type: 'foot',   label: '腳掌', icon: '👟', color: '#808080', dimensions: { width: 1, height: 1 } },
+  eye:    { type: 'eye',    label: '眼睛', icon: '👁️', color: '#00BFFF', dimensions: { width: 1, height: 1 } },
+};
