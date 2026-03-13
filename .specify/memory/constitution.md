@@ -1,21 +1,16 @@
 <!--
 Sync Impact Report
-- 版本變更: 模板占位值 -> 1.0.0
+- 版本變更: 1.0.0 -> 1.1.0
 - 調整原則:
-	- 原則一占位名稱 -> 一、簡潔優先，禁止過度設計
-	- 原則二占位名稱 -> 二、變更紀錄最小化與文件節制
-	- 原則三占位名稱 -> 三、TDD 為強制流程
-	- 原則四占位名稱 -> 四、Git 流程健康檢查必須可驗證
-	- 原則五占位名稱 -> 五、Implement 階段紀律與交付約束
-- 新增章節:
-	- 專案技術與交付約束
-	- 開發流程與品質門檻
+	- 無既有原則重新命名
+- 新增原則:
+	- 六、規格文件與回覆必須使用繁體中文
 - 移除章節:
 	- 無
 - 模板同步狀態:
-	- ✅ updated: .specify/templates/plan-template.md
-	- ✅ updated: .specify/templates/spec-template.md
-	- ✅ updated: .specify/templates/tasks-template.md
+	- ✅ updated: .specify/templates/spec-template.md（新增 CA-007 對齊項目）
+	- ✅ updated: .specify/templates/plan-template.md（Constitution Check 新增繁體中文核查項）
+	- ✅ checked (no change needed): .specify/templates/tasks-template.md
 	- ✅ checked (no file): .specify/templates/commands/*.md
 	- ✅ checked (no change needed): README.md
 - 延後事項:
@@ -53,6 +48,12 @@ Implement 階段 MUST 維持 `tasks.md` 任務勾選狀態正確反映進度；M
 預設交付目標 MUST 為可部署至 GitHub Pages 的前端靜態網站，除非使用者另有要求。
 理由：確保進度透明、保護規格資產，並維持可快速部署的預設路徑。
 
+### 六、規格文件與回覆必須使用繁體中文
+所有規格文件（spec.md、plan.md、tasks.md 等）的內容 MUST 以繁體中文撰寫；
+代理回覆使用者時 MUST 以繁體中文回應，除非使用者明確要求其他語言。
+程式碼、命令、路徑、技術識別碼不在此限。
+理由：確保文件與溝通語言一致，降低跨語言誤解風險。
+
 ## 專案技術與交付約束
 
 - 所有規格、計畫與任務定義 MUST 與本憲章一致，衝突時以本憲章為準。
@@ -76,4 +77,4 @@ Implement 階段 MUST 維持 `tasks.md` 任務勾選狀態正確反映進度；M
 - 合規檢查：所有 PR 與實作流程審查 MUST 檢核 TDD、Git 健康檢查、任務勾選與文件保護
 	規則。
 
-**Version**: 1.0.0 | **Ratified**: 2026-03-06 | **Last Amended**: 2026-03-06
+**Version**: 1.1.0 | **Ratified**: 2026-03-06 | **Last Amended**: 2026-03-13

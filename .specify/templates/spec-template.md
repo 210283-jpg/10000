@@ -13,6 +13,7 @@
 - **CA-004 Git 可追溯性**: 定義各階段需執行的 git 狀態檢查點。
 - **CA-005 Implement 保護**: 明確要求 implement 階段不得刪除或覆蓋規格文件，且 tasks 勾選需反映真實進度。
 - **CA-006 網站預設交付**: 若為網站專案，預設以可部署 GitHub Pages 的前端靜態網站為目標。
+- **CA-007 繁體中文**: 確認本規格文件及所有回覆以繁體中文撰寫。
 
 ## User Scenarios & Testing *(mandatory)*
 

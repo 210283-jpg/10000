@@ -37,6 +37,7 @@
 - [ ] Git 健康檢查：是否定義各階段需檢查 `git status`、`git branch --show-current`、`git rev-parse --short HEAD`？
 - [ ] Implement 保護：是否明確禁止覆蓋/刪除 `spec.md`、`plan.md`、`tasks.md`，並要求 `tasks.md` 勾選反映真實進度？
 - [ ] 網站專案預設：若為網站開發，是否以可部署 GitHub Pages 的前端靜態網站為預設方案？
+- [ ] 繁體中文：本計畫及所有回覆是否以繁體中文撰寫？
 
 ## Project Structure
 
