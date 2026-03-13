@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模型建構遊戲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="screen-model-select" class="screen">
+    <h1>模型建構遊戲</h1>
+    <div id="model-catalog"></div>
+  </section>
+
+  <section id="screen-build" class="screen hidden">
+    <div id="build-layout">
+      <aside id="parts-panel"></aside>
+      <main id="build-main">
+        <canvas id="build-canvas"></canvas>
+      </main>
+      <div id="hud">
+        <div>分數: <span id="hud-score">0</span></div>
+        <div>時間: <span id="hud-timer">00:00</span></div>
+        <button id="btn-undo">↩ 復原</button>
+        <button id="btn-menu">☰ 選單</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-results" class="screen hidden">
+    <h2>建造完成！</h2>
+    <div>
+      <p>得分: <span id="results-score">0</span></p>
+      <p>時間: <span id="results-time">00:00</span></p>
+      <p>最佳紀錄: <span id="results-best-score">-</span></p>
+    </div>
+    <div id="achievements-list"></div>
+    <button data-action="replay">再玩一次</button>
+    <button data-action="menu">返回選單</button>
+  </section>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

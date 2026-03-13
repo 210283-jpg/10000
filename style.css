@@ -1,0 +1,202 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cell-size: 48px;
+  --panel-width: 180px;
+  --bg: #1a1a2e;
+  --card-bg: #16213e;
+  --accent: #0f3460;
+  --text: #e0e0e0;
+  --highlight: #e94560;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.hidden { display: none !important; }
+
+.screen { padding: 1rem; min-height: 100vh; }
+
+/* Model selection */
+#model-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.model-card {
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+.model-card .model-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.model-card .model-name { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem; }
+
+.model-card .model-status {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background: transparent;
+  min-height: 1.2rem;
+}
+
+.model-card .model-status.in-progress { background: #f59e0b; color: #000; }
+.model-card .model-status.completed { background: #10b981; color: #000; }
+
+.model-card button {
+  background: var(--highlight);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Build screen */
+#build-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+#parts-panel {
+  width: var(--panel-width);
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+#parts-panel h3 { font-size: 0.9rem; margin-bottom: 0.5rem; color: #aaa; }
+
+.part-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+  border: 2px solid transparent;
+}
+
+.part-item:hover { background: var(--accent); }
+.part-item.selected { border-color: var(--highlight); background: var(--accent); }
+.part-item.depleted { opacity: 0.4; cursor: not-allowed; }
+
+.part-item .part-icon { font-size: 1.2rem; }
+.part-item .part-label { flex: 1; font-size: 0.85rem; }
+.part-item .part-count {
+  font-size: 0.8rem;
+  background: var(--accent);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+#build-main { flex: 1; }
+
+#build-canvas {
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  cursor: crosshair;
+  display: block;
+}
+
+#hud {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+#hud button {
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#hud button:hover { background: var(--highlight); }
+
+/* Results screen */
+#screen-results { text-align: center; }
+#screen-results h2 { font-size: 2rem; margin-bottom: 1rem; }
+#screen-results p { font-size: 1.1rem; margin: 0.4rem 0; }
+
+#achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.achievement-badge {
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  background: #333;
+  font-size: 0.85rem;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.achievement-badge.unlocked {
+  opacity: 1;
+  background: #7c3aed;
+  animation: badge-pop 0.4s ease;
+}
+
+@keyframes badge-pop {
+  0% { transform: scale(0.8); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+#screen-results button {
+  background: var(--highlight);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.4rem;
+  font-size: 1rem;
+}
+
+/* Part placement animation */
+@keyframes cell-placed {
+  0% { opacity: 0.5; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+h1 { font-size: 2rem; text-align: center; color: var(--text); }
