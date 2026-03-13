@@ -142,7 +142,7 @@
 - [X] T044 [P] Update `index.html` with proper `<meta charset>`, `<meta name="viewport">`, `<title>模型建構遊戲</title>`, GitHub Pages compatible relative paths
 - [X] T045 Run full test suite (`npm test && npm run test:e2e`) — all tests must pass GREEN
 - [ ] T046 Manual smoke test per `quickstart.md`: verify SC-003 (part placement visual update within 200 ms), SC-005 (first load < 3 s), SC-004 (progress restore < 5 s), SC-006 (zero-tutorial first completion)
-- [ ] T047 Create Git checkpoint tag: `git tag impl-001 && git push origin impl-001`
+- [X] T047 Create Git checkpoint tag: `git tag impl-001 && git push origin impl-001`
 
 ---
 
