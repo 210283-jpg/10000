@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>模型建構遊戲</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Screen 1: Model Selection -->
+  <section id="screen-model-select">
+    <header class="game-header">
+      <h1>🎮 模型建構遊戲</h1>
+      <p>選擇一個模型開始建造！</p>
+    </header>
+    <div id="model-grid" class="model-grid"></div>
+  </section>
+
+  <!-- Screen 2: Build Screen -->
+  <section id="screen-build" class="hidden">
+    <div class="build-layout">
+      <aside id="parts-panel" class="parts-panel">
+        <h2>零件庫</h2>
+        <div id="parts-list"></div>
+      </aside>
+      <main class="canvas-area">
+        <div class="hud">
+          <span>⭐ 分數：<span id="hud-score">0</span></span>
+          <span>⏱ 時間：<span id="hud-timer">00:00</span></span>
+        </div>
+        <canvas id="build-canvas"></canvas>
+        <div class="build-controls">
+          <button id="btn-undo">↩ 復原</button>
+          <button id="btn-menu">🏠 選單</button>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- Screen 3: Results Screen -->
+  <section id="screen-results" class="hidden">
+    <div class="results-content">
+      <h1>🎉 完成！</h1>
+      <div class="results-stats">
+        <div class="stat-card">
+          <div class="stat-label">本次得分</div>
+          <div class="stat-value" id="results-score">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">完成時間</div>
+          <div class="stat-value" id="results-time">00:00</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">最高分</div>
+          <div class="stat-value" id="results-best-score">0</div>
+        </div>
+      </div>
+      <div id="achievements-panel" class="achievements-panel">
+        <h2>成就</h2>
+        <div id="achievements-list"></div>
+      </div>
+      <div class="results-actions">
+        <button data-action="replay">🔄 再玩一次</button>
+        <button data-action="menu">🏠 選單</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
